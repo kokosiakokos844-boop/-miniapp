@@ -1,8 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<title>IKEPP</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#17212b,#0f1720);
+display:flex;
+justify-content:center;
+align-items:flex-start;
+min-height:100vh;
+overflow-y:auto;
+overflow-x:hidden;
+padding:30px 0;
+color:#fff;
+}
+
+.bg{
+position:fixed;
+inset:0;
+overflow:hidden;
+z-index:-1;
+}
+
+.circle{
+position:absolute;
+border-radius:50%;
+background:rgba(42,171,238,.15);
+animation:float 10s infinite ease-in-out;
+}
+
+.circle:nth-child(1){
+width:220px;
+height:220px;
+left:-60px;
+top:80px;
+}
+
+.circle:nth-child(2){
+width:170px;
+height:170px;
+right:-40px;
+bottom:100px;
+animation-duration:14s;
+}
+
+@keyframes float{
+50%{transform:translateY(-30px);}
+}
+
+.card{
+width:360px;
+max-width:92%;
+background:rgba(36,47,61,.88);
+backdrop-filter:blur(15px);
+border-radius:28px;
+padding:30px;
+margin-bottom:40px;
+box-shadow:0 15px 40px rgba(0,0,0,.45);
+}
+
+.avatar{
+width:110px;
+height:110px;
+border-radius:50%;
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#229ED9;
+font-size:48px;
+font-weight:bold;
+}
+
+h1{
+text-align:center;
+margin-top:20px;
+font-size:34px;
+}
+
+p{
+text-align:center;
+color:#b7c4d3;
+margin:8px 0 25px;
+}
+
+.button{
+display:flex;
+align-items:center;
+gap:15px;
+text-decoration:none;
+background:#2b5278;
+color:white;
+padding:17px;
+border-radius:18px;
+margin-top:14px;
+transition:.25s;
+}
+
+.button:hover{
+background:#356d9d;
+transform:translateY(-2px);
+}
+
+.icon{
+width:52px;
+height:52px;
+border-radius:50%;
+background:#229ED9;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+}
+
+.arrow{
+margin-left:auto;
+font-size:22px;
+opacity:.6;
+}
+
+.footer{
+margin-top:24px;
+text-align:center;
+font-size:13px;
+color:#8ba1b7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+<div class="circle"></div>
+<div class="circle"></div>
+</div>
+
+<div class="card">
+
+<div class="avatar">I</div>
+
+<h1>IKEPP</h1>
+
+<p>Telegram Mini App</p>
+
+
 <a class="button" href="https://t.me/ikepp" target="_blank">
 <div class="icon">👤</div>
 <div>
 <b>Мой Telegram</b><br>
-тык
+@ikepp
 </div>
 <div class="arrow">›</div>
 </a>
@@ -12,7 +171,7 @@
 <div class="icon">📢</div>
 <div>
 <b>Подсобка</b><br>
-тык
+@genocide_whoress
 </div>
 <div class="arrow">›</div>
 </a>
@@ -22,7 +181,7 @@
 <div class="icon">🤖</div>
 <div>
 <b>Лудка Epic Gift</b><br>
-тык
+@epic_gift_bot
 </div>
 <div class="arrow">›</div>
 </a>
@@ -46,3 +205,24 @@
 </div>
 <div class="arrow">›</div>
 </a>
+
+
+<div class="footer">
+Made with ❤️ for Telegram
+</div>
+
+</div>
+
+
+<script>
+if(window.Telegram && Telegram.WebApp){
+Telegram.WebApp.ready();
+Telegram.WebApp.expand();
+
+document.documentElement.style.background=Telegram.WebApp.backgroundColor;
+document.body.style.background=Telegram.WebApp.backgroundColor;
+}
+</script>
+
+</body>
+</html>
