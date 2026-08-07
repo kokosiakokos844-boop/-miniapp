@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IKEPP</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#17212b,#0f1720);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+color:white;
+}
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.circle{
+position:absolute;
+border-radius:50%;
+background:rgba(42,171,238,.15);
+animation:float 10s infinite ease-in-out;
+}
+
+.circle:nth-child(1){
+width:200px;
+height:200px;
+left:-50px;
+top:80px;
+}
+
+.circle:nth-child(2){
+width:150px;
+height:150px;
+right:-30px;
+bottom:120px;
+animation-duration:14s;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-30px);
+}
+}
+
+.card{
+width:360px;
+max-width:92%;
+background:rgba(36,47,61,.88);
+backdrop-filter:blur(15px);
+border-radius:28px;
+padding:30px;
+box-shadow:0 15px 40px rgba(0,0,0,.45);
+}
+
+.avatar{
+width:110px;
+height:110px;
+border-radius:50%;
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#229ED9;
+font-size:48px;
+font-weight:bold;
+}
+
+h1{
+text-align:center;
+margin-top:20px;
+font-size:34px;
+}
+
+p{
+text-align:center;
+color:#b7c4d3;
+margin:8px 0 25px;
+}
+
+.button{
+display:flex;
+align-items:center;
+gap:15px;
+text-decoration:none;
+background:#2b5278;
+color:white;
+padding:17px;
+border-radius:18px;
+margin-top:14px;
+transition:.25s;
+}
+
+.button:hover{
+transform:translateY(-2px);
+background:#356d9d;
+}
+
+.icon{
+width:52px;
+height:52px;
+border-radius:50%;
+background:#229ED9;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+}
+
+.arrow{
+margin-left:auto;
+font-size:22px;
+opacity:.6;
+}
+
+.footer{
+margin-top:25px;
+text-align:center;
+font-size:13px;
+color:#8ba1b7;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="bg">
+<div class="circle"></div>
+<div class="circle"></div>
+</div>
+
+<div class="card">
+
+<div class="avatar">I</div>
+
+<h1>IKEPP</h1>
+
+<p>Telegram Mini App</p>
+
+<a class="button" href="https://t.me/ikepp">
+<div class="icon">👤</div>
+<div>
+<b>Мой Telegram</b><br>
+@ikepp
+</div>
+<div class="arrow">›</div>
+</a>
+
+<a class="button" href="https://t.me/genocide_whoress">
+<div class="icon">📢</div>
+<div>
+<b>Подсобка</b><br>
+@genocide_whoress
+</div>
+<div class="arrow">›</div>
+</a>
+
+<a class="button" href="https://t.me/epic_gift_bot">
+<div class="icon">🤖</div>
+<div>
+<b>Мой бот</b><br>
+@epic_gift_bot
+</div>
+<div class="arrow">›</div>
+</a>
+
+<div class="footer">
+Made for Telegram ❤️
+</div>
+
+</div>
+
+</body>
+</html>
